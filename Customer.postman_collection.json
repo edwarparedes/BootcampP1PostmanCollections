@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "587abf4e-b06e-4e2d-a0de-c81847bc281c",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/customer/620ed9e9661a3478dbb85ce",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer",
+						"620ed9e9661a3478dbb85ce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Duko Music SAC\",\r\n    \"type\": \"Business\",\r\n    \"documentType\": \"RUC\",\r\n    \"documentNumber\": \"20763547328\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"620ed9e9661a3478dbb85ce8\",\r\n    \"name\": \"Edwar Ruben Paredes Laureano\",\r\n    \"type\": \"Personal\",\r\n    \"documentType\": \"DNI\",\r\n    \"documentNumber\": \"76354730\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/customer/620edb28661a3478dbb85ce9",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"customer",
+						"620edb28661a3478dbb85ce9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
