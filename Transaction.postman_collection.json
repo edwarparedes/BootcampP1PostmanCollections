@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "a60d67d9-76c1-4879-9f99-8014c1f3930e",
+		"name": "Transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8004/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transaction by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8004/transaction/62157031fa73b3541364f12e",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction",
+						"62157031fa73b3541364f12e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"type\": \"Deposit\",\r\n    \"amount\": 100,\r\n    \"accountId\": \"6215f1e06321a3494029670f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8004/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update transaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"id\": \"62157031fa73b3541364f12e\",\r\n    \"type\": \"Deposit\",\r\n    \"creationTime\" : \"2022-02-22T15:53:16\",\r\n    \"amount\": 200,\r\n    \"accountId\": \"6214a4ef6b455b4e6a842100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8004/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete transaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8004/transaction/62157031fa73b3541364f12e",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction",
+						"62157031fa73b3541364f12e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8004/transaction/account/6214a5026b455b4e6a842101",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction",
+						"account",
+						"6214a5026b455b4e6a842101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6214a51b6b455b4e6a842102\",\r\n    \"accountNumber\": \"19216826459500\",\r\n    \"maintenanceFee\": 10.0,\r\n    \"movementLimit\": 0,\r\n    \"balance\": 300.0,\r\n    \"date\": \"2022-01-01T00:00:00.000+00:00\",\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Edwar Robin\",\r\n            \"lastName\": \"Perez\",\r\n            \"documentType\": \"DNI\",\r\n            \"documentNumber\": \"25647512\"\r\n        }\r\n    ],\r\n    \"signatories\": [],\r\n    \"customerId\": \"620ed9e9661a3478dbb85ce8\",\r\n    \"productId\": \"621450fc8d5137025655228d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8004/transaction/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions by accountId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8004/transaction/gettransactionsbyaccount/6215f1ff6321a34940296710",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"transaction",
+						"gettransactionsbyaccount",
+						"6215f1ff6321a34940296710"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
